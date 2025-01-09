@@ -1,36 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="css/yes-no.css" />
+		<title>Yes No</title>
+	</head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="css/yes-no.css" />
-  <title>Yes No</title>
-</head>
+	<body>
+		<section class="container">
+			<h1>Ask me anything</h1>
+			<form class="form-ask" onsubmit="onAsk(event)">
+				<input class="user-query" type="text" autocomplete="off" placeholder="Your question..." />
+				<!-- <input 
+                    pattern="(^[A-z]{3,}\?$)" 
+                    class="user-query" type="text" 
+                    autocomplete="off" placeholder="Your question..." /> -->
 
-<body onload="onInit()">
-  <section class="container">
-    <h1>Ask me anything</h1>
-    <form class="form-ask" onsubmit="onAsk(event)">
-      <input class="user-query" type="text" autocomplete="off" placeholder="Your question..." />
-      <!-- <input pattern="(^[A-z]{3,}\?$)" class="user-query" type="text" autocomplete="off"
-        placeholder="Your question..." /> -->
+				<button>Ask</button>
+			</form>
+		</section>
 
-      <button>Ask</button>
-    </form>
-  </section>
+		<section hidden class="ans-container container">
+			<h3></h3>
+			<img onload="onYesNoImgReady()" />
+			<section class="joke-or-dog container"> </section>
+		</section>
 
-  <section class="ans-container container">
-    <h3></h3>
-    <img onload="onYesNoImgReady()" />
-    <section class="joke-or-dog container">
-    </section>
-  </section>
-
-  <script src="lib/jquery-3.6.0.min.js"></script>
-  <script src="js/services/yes-no-service.js"></script>
-  <script src="js/yes-no.js"></script>
-</body>
-
+		<script src="js/services/ajax.service.js"></script>
+		<script src="js/services/yes-no-service.js"></script>
+		<script src="js/yes-no.js"></script>
+	</body>
 </html>

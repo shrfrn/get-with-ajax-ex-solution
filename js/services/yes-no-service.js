@@ -5,15 +5,13 @@ const JOKE_URL = 'https://api.chucknorris.io/jokes/random'
 const DOG_URL = 'https://dog.ceo/api/breeds/image/random'
 
 function getAnswer(onSuccess) {
-  $.get(YES_NO_URL, onSuccess)
+	getData(YES_NO_URL, onSuccess)
 }
 
 function getJoke(onSuccess) {
-  $.get(JOKE_URL, onSuccess)
+	getData(JOKE_URL, onSuccess)
 }
 
 function getDog(onSuccess) {
-  $.get(DOG_URL, onSuccess)
+	getData(DOG_URL, onSuccess)
 }
-
-
