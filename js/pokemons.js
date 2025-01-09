@@ -32,7 +32,7 @@ function renderPokemon(pokemon) {
 
     let currImgIdx = 0
     setInterval(() => {
-        let currImg = pokemon.imgs[currImgIdx++]
+        let currImg = imgs[currImgIdx++]
         document.querySelector(`.info-${name} img`).src = currImg
 
         if (currImgIdx === pokemon.imgs.length) currImgIdx = 0
