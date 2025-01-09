@@ -1,0 +1,57 @@
+@import './base/util.css';
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.btn-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  grid-auto-rows: 50px;
+  gap: 0.5em;
+}
+
+.movies {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 0.5em;
+}
+
+.card-img {
+  width: 100%;
+}
+
+.card {
+  background-color: #eeeeee;
+  padding: 2em;
+  border-radius: 0.5em;
+  transition: 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(103%);
+}
+
+.card .venue {
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+.card .location {
+  font-size: 0.9em;
+}
+
+.card .stats {
+  font-size: 1.5em;
+}
+
+.card .stats p:last-of-type {
+  font-size: 0.7em;
+}
+
+.card .content .header {
+  justify-content: start;
+}

@@ -1,0 +1,27 @@
+@import './base/util.css';
+
+header {
+  text-align: center;
+  border-bottom: 1px solid #000;
+  padding-bottom: 2em;
+}
+
+.contacts-container {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2rem;
+}
+
+.card .description {
+  text-align: center;
+}
+
+.card .description .name {
+  font-weight: 600;
+}
+
+.btn-download {
+  text-decoration: none;
+  color: #000;
+}
