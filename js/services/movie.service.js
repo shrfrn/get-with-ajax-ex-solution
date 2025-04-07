@@ -1,26 +1,29 @@
 'use strict'
 
 const apiKey = '096316ccf97d9bb07f660988be9d01ed'
-const genresURL = `https://api.themoviedb.org/3/genre/movie/list?api_key=${apiKey}`
+const baseURL = 'https://api.themoviedb.org/3'
 
 const genres_key = 'genres'
 const movies_key = 'movies'
 
 function getGenres(onSuccess) {
+    const url = `${baseURL}/genre/movie/list?api_key=${apiKey}`
+
     let genres = loadFromStorage(genres_key) || []
     if (genres.length) onSuccess(genres)
 
-    getData(genresURL, ({ genres }) => {
+    getData(url, ({ genres }) => {
         saveToStorage(genres_key, genres)
         onSuccess(genres)
     })
 }
 
 function getMoviesByGenre(genre, onSuccess) {
+    const url = `${baseURL}/discover/movie?api_key=${apiKey}&with_genres=${genre.id}`
+    
     let movies = loadFromStorage(movies_key) || {}
     if (movies[genre.name]) return onSuccess(movies[genre.name])
 
-    const url = `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&with_genres=${genre.id}`
     getData(url, res => {
         const moviesData = prepareData(res)
 
