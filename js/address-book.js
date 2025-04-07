@@ -11,8 +11,7 @@ function onInit() {
 }
 
 function renderContacts(contacts) {
-  const strHTMLs = contacts.map(
-    (contact) => `
+  const strHTMLs = contacts.map(contact => `
       <article class="card">
         <div class="image">
           <img src="https://robohash.org/${contact.fname}?set=set4">
@@ -23,8 +22,7 @@ function renderContacts(contacts) {
           <p class="address">${contact.address}</p>
           <p class="city">${contact.city}</p>
         </div>
-      </article>`
-  )
+      </article>`)
 
   document.querySelector('.contacts-container').innerHTML = strHTMLs.join('')
 }

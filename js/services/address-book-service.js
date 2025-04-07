@@ -1,7 +1,7 @@
 'use strict'
 
 const URL =
-    'http://www.filltext.com/?rows=20&fname=%7bfirstName%7d&lname=%7blastName%7d&tel=%7bphone%7Cformat%7d&address=%7bstreetAddress%7d&city=%7bcity%7d&state=%7busState%7Cabbr%7d&zip=%7bzip%7d&pretty=true'
+    'https://mrjson.com/api?fname={firstName}&lname={lastName}&email={email}&tel={phone|area3}&address={streetAddress}&city={city}&state={usState|abbr}'
 
 function getContacts(onSuccess) {
     const xhr = new XMLHttpRequest()
