@@ -14,13 +14,13 @@ function renderContacts(contacts) {
 	const strHTMLs = contacts.map(contact => `
         <article class="card">
             <div class="image">
-            <img src="https://robohash.org/${contact.fname}?set=set4">
+                <img src="https://robohash.org/${contact.fname}?set=set4">
             </div>
             <div class="description">
-            <p class="name">${contact.fname} ${contact.lname}</p>
-            <p class="tel">${contact.tel}</p>
-            <p class="address">${contact.address}</p>
-            <p class="city">${contact.city}</p>
+                <p class="name">${contact.fname} ${contact.lname}</p>
+                <p class="tel">${contact.tel}</p>
+                <p class="address">${contact.address}</p>
+                <p class="city">${contact.city}</p>
             </div>
         </article>`
 	)

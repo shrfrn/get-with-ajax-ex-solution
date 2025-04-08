@@ -15,7 +15,7 @@ function renderPokemons(pokemons) {
             <h2>${pokemon.name}</h2>
             <div class="info-${pokemon.name}">
                 <p>Weight: <span></span></p>
-                <img src="" />
+                <img src="" alt="image of a pokemon"/>
             </div>
         </article>`)
 

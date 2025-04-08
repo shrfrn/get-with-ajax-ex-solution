@@ -16,7 +16,7 @@ function onAsk(ev) {
 function renderAnswer({ answer, image }) {
 	const elAns = document.querySelector('.ans-container')
 
-	elAns.querySelector('h3').innerText = answer
+	elAns.querySelector('p').innerText = answer
 	elAns.querySelector('img').src = image
 
 	if (answer === 'yes') getJoke(renderJoke)
@@ -32,7 +32,7 @@ function renderJoke({ value }) {
 	el.innerHTML = `<p>${value}</p>`
 }
 
-function renderDog({ message }) {
+function renderDog({ message: src }) {
 	const el = document.querySelector('.joke-or-dog')
-	el.innerHTML = `<img src="${message}" />`
+	el.innerHTML = `<img src="${src}" />`
 }

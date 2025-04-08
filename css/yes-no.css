@@ -32,8 +32,9 @@ h2 {
 	transition: 0.5s;
 }
 
-.ans-container h3 {
+.ans-container p.ans {
 	font-size: 2em;
+    font-weight: bold;
 	text-transform: capitalize;
 }
 
