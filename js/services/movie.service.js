@@ -10,7 +10,7 @@ function getGenres(onSuccess) {
     const url = `${baseURL}/genre/movie/list?api_key=${apiKey}`
 
     let genres = loadFromStorage(genres_key) || []
-    if (genres.length) onSuccess(genres)
+    if (genres.length) return onSuccess(genres)
 
     getData(url, ({ genres }) => {
         saveToStorage(genres_key, genres)
